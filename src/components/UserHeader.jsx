@@ -23,7 +23,7 @@ const UserHeader=({user})=> {
         if(updating) return;
         setUpdating(true);
         try{
-            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/follow/${user._id}`,{
+            const res = await fetch(`https://threads-backend-vii3.onrender.com/api/users/follow/${user._id}`,{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"

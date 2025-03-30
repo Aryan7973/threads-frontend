@@ -39,7 +39,7 @@ import userAtom from '../atoms/userAtom';
     const handleSignup = async()=>{
     
         try{
-            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/signup`,{
+            const res = await fetch("https://threads-backend-vii3.onrender.com/api/users/signup",{
               method:"POST",
               headers:{
                 "Content-Type":"application/json",

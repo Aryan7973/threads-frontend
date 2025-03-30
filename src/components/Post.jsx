@@ -30,7 +30,7 @@ const Post = ({post,postedBy}) => {
         const getUser = async()=>{
             try{
                 
-                const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/profile/`+postedBy);
+                const res = await fetch("https://threads-backend-vii3.onrender.com/api/users/profile/"+postedBy);
                 const data = await res.json();
                 console.log(data);
                 if(data.error){
@@ -52,7 +52,7 @@ const Post = ({post,postedBy}) => {
             e.preventDefault();
             if(!window.confirm("Are you sure you want to delete this post?")) return;
 
-            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/posts/${post._id}`,{
+            const res = await fetch(`https://threads-backend-vii3.onrender.com/api/posts/${post._id}`,{
                 method:"DELETE"
             });
             const data = await res.json();

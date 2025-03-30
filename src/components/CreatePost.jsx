@@ -47,7 +47,7 @@ const CreatePost = () => {
         setLoading(true);
 
         try{
-            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/posts/create`,{
+            const res = await fetch("https://threads-backend-vii3.onrender.com/api/posts/create",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"

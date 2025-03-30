@@ -14,7 +14,7 @@ const LogoutButton = () => {
         try{
 
             
-            const res =  await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/logout`,{
+            const res =  await fetch("https://threads-backend-vii3.onrender.com/api/users/logout",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json",
