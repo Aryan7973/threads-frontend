@@ -44,7 +44,7 @@ import { useNavigate } from 'react-router-dom';
       setUpdating(true);
       try{
 
-        const res = await fetch(`/api/users/update/${user._id}`,{
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/update/${user._id}`,{
           method:"PUT",
           headers:{
             "Content-Type":"application/json"

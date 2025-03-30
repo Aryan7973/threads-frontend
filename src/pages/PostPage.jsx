@@ -24,7 +24,7 @@ const PostPage = () => {
       setPosts([]);
       try {
         
-        const res = await fetch(`/api/posts/${pid}`);
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/posts/${pid}`);
         const data = await res.json();
         if(data.error){
           showToast("Error",data.error,"error");
@@ -45,7 +45,7 @@ const PostPage = () => {
         
         if(!window.confirm("Are you sure you want to delete this post?")) return;
 
-        const res = await fetch(`/api/posts/${currentPost._id}`,{
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/posts/${currentPost._id}`,{
             method:"DELETE"
         });
         const data = await res.json();

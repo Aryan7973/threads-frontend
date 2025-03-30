@@ -23,7 +23,7 @@ const UserHeader=({user})=> {
         if(updating) return;
         setUpdating(true);
         try{
-            const res = await fetch(`/api/users/follow/${user._id}`,{
+            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/follow/${user._id}`,{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"

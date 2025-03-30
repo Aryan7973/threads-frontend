@@ -14,7 +14,6 @@ const Actions = ({ post }) => {
     const [reply,setReply] = useState("");
 
     const {isOpen,onOpen,onClose} = useDisclosure();
-
     const handleLikeAndUnlike = async()=>{
         if(!user) return showToast("Error","you must be logged in to like a post","error");
         
@@ -22,7 +21,7 @@ const Actions = ({ post }) => {
         setIsLiking(true);
         
         try{
-            const res = await fetch("/api/posts/like/"+post._id,{
+            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/posts/like/`+post._id,{
                 method:"PUT",
                 headers:{
                     "Content-Type":"application/json",
@@ -73,7 +72,7 @@ const Actions = ({ post }) => {
         setIsReplying(true);
         try {
             
-            const res = await fetch("/api/posts/reply/"+post._id,{
+            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/posts/reply/`+post._id,{
                 method:"PUT",
                 headers:{
                     "Content-Type":"application/json"
