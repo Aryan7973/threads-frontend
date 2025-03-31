@@ -73,7 +73,7 @@ const Actions = ({ post }) => {
         setIsReplying(true);
         try {
             
-            const res = await fetch("https://threads-backend-vii3.onrender.com/api/posts/reply/"+post._id,{
+            const res = await fetch("https://threads-backend-8pii.onrender.com/api/posts/reply/"+post._id,{
                 method:"PUT",
                 headers:{
                     "Content-Type":"application/json"

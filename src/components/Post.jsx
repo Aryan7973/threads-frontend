@@ -30,7 +30,7 @@ const Post = ({post,postedBy}) => {
         const getUser = async()=>{
             try{
                 
-                const res = await fetch("https://threads-backend-vii3.onrender.com/api/users/profile/"+postedBy);
+                const res = await fetch("https://threads-backend-8pii.onrender.com/api/users/profile/"+postedBy);
                 const data = await res.json();
                 console.log(data);
                 if(data.error){
