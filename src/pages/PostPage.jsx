@@ -24,7 +24,7 @@ const PostPage = () => {
       setPosts([]);
       try {
         
-        const res = await fetch(`https://threads-backend-vii3.onrender.com/api/posts/${pid}`);
+        const res = await fetch(`https://threads-backend-8pii.onrender.com/api/posts/${pid}`);
         const data = await res.json();
         if(data.error){
           showToast("Error",data.error,"error");
