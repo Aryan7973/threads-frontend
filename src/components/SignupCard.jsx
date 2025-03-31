@@ -39,12 +39,13 @@ import userAtom from '../atoms/userAtom';
     const handleSignup = async()=>{
     
         try{
-            const res = await fetch("https://threads-backend-vii3.onrender.com/api/users/signup",{
+            const res = await fetch("https://threads-backend-8pii.onrender.com/api/users/signup",{
               method:"POST",
               headers:{
                 "Content-Type":"application/json",
               },
-              body:JSON.stringify(inputs)
+              body:JSON.stringify(inputs),
+              credentials:"include"
             });
             const data  = await res.json();
             console.log(data);

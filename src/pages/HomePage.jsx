@@ -16,7 +16,7 @@ const HomePage=()=>{
             setPosts([]);
             try{
 
-                const res = await fetch("https://threads-backend-vii3.onrender.com/api/posts/feed",{
+                const res = await fetch("https://threads-backend-8pii.onrender.com/api/posts/feed",{
                     method:'GET',
                     credentials:"include",
                 });

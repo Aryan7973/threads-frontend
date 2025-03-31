@@ -21,11 +21,12 @@ const Actions = ({ post }) => {
         setIsLiking(true);
         
         try{
-            const res = await fetch("https://threads-backend-vii3.onrender.com/api/posts/like/"+post._id,{
+            const res = await fetch("https://threads-backend-8pii.onrender.com/api/posts/like/"+post._id,{
                 method:"PUT",
                 headers:{
                     "Content-Type":"application/json",
-                }
+                },
+                credentials:"include",
 
             });
 
@@ -77,7 +78,8 @@ const Actions = ({ post }) => {
                 headers:{
                     "Content-Type":"application/json"
                 },
-                body:JSON.stringify({text:reply})
+                body:JSON.stringify({text:reply}),
+                credentials:"include",
             })
 
             const data = await res.json();

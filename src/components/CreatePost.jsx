@@ -47,12 +47,13 @@ const CreatePost = () => {
         setLoading(true);
 
         try{
-            const res = await fetch("https://threads-backend-vii3.onrender.com/api/posts/create",{
+            const res = await fetch("https://threads-backend-8pii.onrender.com/api/posts/create",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
                 },
-                body:JSON.stringify({postedBy:user._id,text:postText,img:imgUrl})
+                body:JSON.stringify({postedBy:user._id,text:postText,img:imgUrl}),
+                credentials:"include",
             });
 
             const data = await res.json();

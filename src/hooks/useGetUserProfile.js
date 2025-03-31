@@ -12,7 +12,7 @@ const useGetUserProfile = () => {
 
         const getUser = async()=>{
             try{
-              const res = await fetch(`https://threads-backend-vii3.onrender.com/api/users/profile/${username}`);
+              const res = await fetch(`https://threads-backend-8pii.onrender.com/api/users/profile/${username}`);
               const data= await res.json();
               if(data.error){
                 showToast("Error",data.error,"error");

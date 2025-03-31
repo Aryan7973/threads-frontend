@@ -23,11 +23,12 @@ const UserHeader=({user})=> {
         if(updating) return;
         setUpdating(true);
         try{
-            const res = await fetch(`https://threads-backend-vii3.onrender.com/api/users/follow/${user._id}`,{
+            const res = await fetch(`https://threads-backend-8pii.onrender.com/api/users/follow/${user._id}`,{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
-                }
+                },
+                credentials:"include"
             });
 
             const data = await res.json();

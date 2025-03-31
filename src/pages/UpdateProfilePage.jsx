@@ -44,12 +44,13 @@ import { useNavigate } from 'react-router-dom';
       setUpdating(true);
       try{
 
-        const res = await fetch(`https://threads-backend-vii3.onrender.com/api/users/update/${user._id}`,{
+        const res = await fetch(`https://threads-backend-8pii.onrender.com/api/users/update/${user._id}`,{
           method:"PUT",
           headers:{
             "Content-Type":"application/json"
           },
-          body:JSON.stringify({...inputs,profilePic:imgUrl})
+          body:JSON.stringify({...inputs,profilePic:imgUrl}),
+          credentials:"include",
         });
 
         const data = await res.json();

@@ -45,8 +45,9 @@ const PostPage = () => {
         
         if(!window.confirm("Are you sure you want to delete this post?")) return;
 
-        const res = await fetch(`https://threads-backend-vii3.onrender.com/api/posts/${currentPost._id}`,{
-            method:"DELETE"
+        const res = await fetch(`https://threads-backend-8pii.onrender.com/api/posts/${currentPost._id}`,{
+            method:"DELETE",
+            credentials:"include"
         });
         const data = await res.json();
         if(data.error){
